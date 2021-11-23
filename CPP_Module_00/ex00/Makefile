@@ -6,7 +6,7 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2021/11/23 14:22:38 by adelille         ###   ########.fr        #
+#    Updated: 2021/11/23 14:59:58 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME =	megaphone
 CC = 	clang++
 RM = 	rm -rf
 
-CFLAGS =	 -Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra
+CFLAGS	+=	-std=c++98
 #CFLAGS +=	-O2
 #CFLAGS +=	-g
 #CFLAGS +=	-fsanitize=address
