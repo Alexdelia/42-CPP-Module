@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:07:40 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/23 14:25:19 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:51:41 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ int	main(int ac, char **av)
 		ft_ps(av[i]);
 		i++;
 	}
-	return (ft_ps((char *)"\n"));
+	std::cout << std::endl;
+	return (0);
 }
