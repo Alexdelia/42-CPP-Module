@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:30:46 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/24 14:54:04 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:59:06 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ void	ft_init_contact(contact	*book)
 {
 	contact	c;
 
-	if (contact::get_nb_contact() <= 8)
-		book[contact::get_nb_contact()] = c;
+	if (contact::get_nb_contact() > 8)
+		return ;
+	c.i = 42;
+	book[contact::get_nb_contact() - 1] = c;
 }
 
 int	main(int ac, char **av)
@@ -37,7 +39,7 @@ int	main(int ac, char **av)
 		return (1);
 	std::cout << contact::get_nb_contact() << std::endl;
 	ft_init_contact(book);
-	std::cout << contact::get_nb_contact() << std::endl;
+	std::cout << contact::get_nb_contact() << " | " << book[0].i << std::endl;
 	free(book);
 	std::cout << contact::get_nb_contact() << std::endl;
 	return (0);
