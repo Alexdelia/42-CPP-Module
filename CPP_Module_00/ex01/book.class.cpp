@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:49:21 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/25 21:21:56 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/25 21:27:40 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,8 @@ void	book::search_contact(void)
 		_contact[i].contact::print_contact(0);
 		i++;
 	}
-	std::cout << "Please enter index of contact wanted" << std::endl;
+	std::cout << std::endl
+		<< "Please enter index of contact wanted" << std::endl;
 	std::getline(std::cin, index);
 	i = index[0] - '0';
 	if (index[1] != '\0')
