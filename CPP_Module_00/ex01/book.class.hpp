@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.class.hpp                                  :+:      :+:    :+:   */
+/*   book.class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 14:26:23 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/25 20:46:49 by adelille         ###   ########.fr       */
+/*   Created: 2021/11/25 18:49:30 by adelille          #+#    #+#             */
+/*   Updated: 2021/11/25 20:36:38 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_HPP
-# define CONTACT_CLASS_HPP
+#ifndef BOOK_CLASS_HPP
+# define BOOK_CLASS_HPP
 
-# include <iostream>
+# include "contact.class.hpp"
 
-class contact
+class book
 {
 	public:
-		contact(void);
-		~contact(void);
+		book(void);
+		~book(void);
 
-		void	add_contact(void);
-		void	print_contact(int full) const;
+		void	search_contact(void);
 
 	private:
-		std::string	_first_name;
-		std::string	_last_name;
-		std::string _nickname;
-		std::string _phone_number;
-		std::string _darkest_secret;
+		contact	_contact[8];
+		int		_nb_contact;
 };
 
 #endif
