@@ -6,13 +6,13 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 14:49:41 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:55:13 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name) :
+Zombie::Zombie(std::string const & name) :
 	_name(name)
 {
 	announce();

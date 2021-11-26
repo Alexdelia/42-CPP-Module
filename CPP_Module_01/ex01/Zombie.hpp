@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:26:23 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 15:51:56 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:54:35 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Zombie
 {
 	public:
-		Zombie(std::string name);
+		Zombie(std::string const & name);
 		Zombie(void);
 		~Zombie(void);
 
