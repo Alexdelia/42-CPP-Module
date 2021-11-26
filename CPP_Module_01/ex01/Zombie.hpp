@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:26:23 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 15:08:28 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:50:46 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Zombie
 		~Zombie(void);
 
 		void	announce(void) const;
-		void	set_name(std::string name);
+		void	set_name(std::string const & name);
 
 	private:
 		std::string	_name;
