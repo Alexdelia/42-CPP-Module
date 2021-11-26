@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 14:49:41 by adelille         ###   ########.fr       */
+/*   Created: 2021/11/26 14:32:26 by adelille          #+#    #+#             */
+/*   Updated: 2021/11/26 14:33:22 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name) :
-	_name(name)
+void	randomChump(std::string name)
 {
-	announce();
-}
-
-Zombie::~Zombie(void)
-{
-	std::cout << "<" << _name << ">\thBraHahuuhhh... x.x" << std::endl;
-}
-
-void	Zombie::announce(void) const
-{
-	std::cout << "<" << _name << ">\tBraiiiiiiinnnzzzZ..." << std::endl;
+	Zombie	z(name);
 }

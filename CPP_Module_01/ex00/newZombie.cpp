@@ -6,7 +6,7 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 14:18:51 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 14:29:12 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 14:30:19 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 Zombie	*newZombie(std::string name)
 {
-	Zombie::Zombie	z(name);
-	Zombie::Zombie	*p;
-
-	p = (Zombie::Zombie *)malloc(sizeof(Zombie::Zombie));
-	if (!p)
-		return (NULL);
-	p = &z;
-	return (p);
+	Zombie	*z = new Zombie(name);
+	
+	return (z);
 }
