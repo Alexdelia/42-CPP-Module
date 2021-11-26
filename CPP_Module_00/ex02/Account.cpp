@@ -6,7 +6,7 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:55:45 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 11:35:58 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 11:48:57 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,18 @@
 
 Account::Account(int initial_deposit) : _amount(initial_deposit)
 {
-	_displayTimestamp();
 	_accountIndex = Account::_nbAccounts;
 	Account::_nbAccounts++;
+	Account::_totalAmount += initial_deposit;
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
 }
 
 Account::~Account(void)
 {
 	Account::_nbAccounts--;
+	_displayTimestamp();
+	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed" << std::endl;
 }
 
 void	Account::_displayTimestamp(void)
