@@ -6,7 +6,7 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:55:45 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 12:07:10 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:23:27 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@
 /*
 #define C_RESET		""
 #define C_BOLD		""
+#define C_UNDERLINE	""
 #define C_RED		""
 #define C_GREEN		""
 #define C_YELLOW	""
+#define C_BLUE		""
 #define C_MAGENTA	""
 #define C_CYAN		""
 */
@@ -40,7 +42,8 @@ Account::~Account(void)
 {
 	_nbAccounts--;
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed" << std::endl;
+	std::cout << C_YELLOW << "index:" << _accountIndex << ";amount:"
+		<< _amount << ";closed" << std::endl << C_RESET;
 }
 
 void	Account::_displayTimestamp(void)
@@ -55,25 +58,48 @@ void	Account::_displayTimestamp(void)
 void	Account::displayAccountsInfos(void)
 {
 	_displayTimestamp();
-	std::cout << "accounts:" << _nbAccounts << ";total:" << _totalAmount << ";deposits:"
-		<< _totalNbDeposits << ";withdrawals:" << _totalNbWithdrawals << std::endl;
+	std::cout << C_MAGENTA << "accounts:" << _nbAccounts << ";total:"
+		<< _totalAmount << ";deposits:" << _totalNbDeposits << ";withdrawals:"
+		<< _totalNbWithdrawals << std::endl << C_RESET;
 }
 
 void	Account::displayStatus(void) const
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex <<  ";amount:" << _amount << ";deposits:"
-		<< _nbDeposits << ";withdrawals:" << _nbWithdrawals << std::endl;
+	std::cout << C_BLUE << "index:" << _accountIndex <<  ";amount:"
+		<< _amount << ";deposits:" << _nbDeposits << ";withdrawals:"
+		<< _nbWithdrawals << std::endl << C_RESET;
 }
 
 void	Account::makeDeposit(int deposit)
 {
-	(void)deposit;
+	_amount += deposit;
+	_totalAmount += deposit;
+	_nbDeposits++;
+	_totalNbDeposits++;
+	_displayTimestamp();
+	std::cout << C_GREEN << "index:" << _accountIndex << ";p_amount:"
+		<< _amount - deposit << ";deposit:" << deposit << ";amount:"
+		<< _amount << ";nb_deposits:" << _nbDeposits << std::endl << C_RESET;
 }
 
 bool	Account::makeWithdrawal(int withdrawal)
 {
-	(void)withdrawal;
+	_displayTimestamp();
+	if (_amount < withdrawal)
+	{
+		std::cout << C_RED << "index:" << _accountIndex << ";p_amount:"
+			<< _amount - withdrawal << ";withdrawal:" << C_BOLD << C_UNDERLINE
+			<< "refused" << std::endl << C_RESET;
+		return (false);
+	}
+	_amount -= withdrawal;
+	_totalAmount -= withdrawal;
+	_nbWithdrawals++;
+	_totalNbWithdrawals++;
+	std::cout << C_RED << "index:" << _accountIndex << ";p_amount:"
+		<< _amount - withdrawal << ";withdrawal:" << withdrawal << ";amount:"
+		<< _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl << C_RESET;
 	return (true);
 }
 
