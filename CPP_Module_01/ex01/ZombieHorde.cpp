@@ -6,14 +6,14 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:05:35 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 15:44:05 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:52:06 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include <sstream>
 
-Zombie	*zombieHorde(int N, std::string name)
+Zombie	*zombieHorde(int N, std::string const & name)
 {
 	if (N <= 0)
 		return (NULL);
