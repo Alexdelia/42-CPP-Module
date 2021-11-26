@@ -6,12 +6,12 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/25 21:16:03 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:40:06 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.class.hpp"
-#include "color.hpp"
+#include "../color.hpp"
 
 contact::contact(void)
 {

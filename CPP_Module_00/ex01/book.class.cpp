@@ -6,13 +6,13 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:49:21 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/25 21:27:40 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:39:57 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "book.class.hpp"
-#include "color.hpp"
+#include "../color.hpp"
 
 static void	ft_prompt(std::string *command)
 {

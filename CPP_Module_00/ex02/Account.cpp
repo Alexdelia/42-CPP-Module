@@ -6,7 +6,7 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:55:45 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 12:23:27 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:39:30 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <ctime>
 #include "Account.hpp"
 
-#include "color.hpp"
+#include "../color.hpp"
 
 /*
 #define C_RESET		""
