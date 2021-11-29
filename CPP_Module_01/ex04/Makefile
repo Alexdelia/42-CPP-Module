@@ -6,11 +6,11 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2021/11/27 16:31:02 by adelille         ###   ########.fr        #
+#    Updated: 2021/11/29 13:28:03 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	Sed_is_for_losers.out
+NAME =	replace
 CC = 	c++
 RM = 	rm -rf
 
