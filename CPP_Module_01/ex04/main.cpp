@@ -6,7 +6,7 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:31:13 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/30 16:32:43 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:32:57 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	main(int ac, char **av)
 	}
 	search = av[2];
 	replace = av[3];
-	if (search.length() <= 0 || replace.length() <= 0)
+	if (!search.length() || !replace.length())
 		std::cout << C_YELLOW << "Warning: Input shouldn't be an empty string"
 			<< std::endl << C_RESET;
 	file = (std::string)av[1] + (std::string)".replace";
@@ -88,7 +88,7 @@ int	main(int ac, char **av)
 		if (!ifs.eof())
 			output += "\n";
 	}
-	if (search.length() > 0)
+	if (search.length())
 		output = sed(output, search, replace);
 	std::ofstream	ofs(file.c_str());
 	ofs << output;
