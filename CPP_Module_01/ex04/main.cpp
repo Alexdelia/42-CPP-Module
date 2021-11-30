@@ -6,7 +6,7 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:31:13 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/30 09:27:32 by adelille         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:32:43 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,17 @@ std::string	sed(std::string input, std::string search, std::string replace)
 		}
 		if (!search[y])
 		{
-			i = x;
+			i = x - 1;
 			y = 0;
 			while (replace[y])
 			{
-				output[o] = replace[y];
+				output += replace[y];
 				o++;
 				y++;
 			}
 		}
 		else
-			output[o] = input[i];
+			output += input[i];
 		i++;
 	}
 	return (output);
@@ -63,20 +63,24 @@ int	main(int ac, char **av)
 	
 	if (ac != 4)
 	{
-		std::cout << C_RED << C_BOLD << "Error: Wrong number of arguments" << std::endl << C_RESET
-			<< "Usage: ./replace [file] [string to search] [string to replace]" << std::endl;
+		std::cout << C_RED << C_BOLD << "Error: Wrong number of arguments"
+			<< std::endl << C_RESET
+			<< "Usage: ./replace [file] [string to search] [string to replace]"
+			<< std::endl << C_RESET;
 		return (1);
 	}
 	std::ifstream	ifs(av[1]);
 	if (!ifs.is_open())
 	{
-		std::cout << C_RED << C_BOLD << "Error: " << av[1] << " failed to open" << std::endl;
+		std::cout << C_RED << C_BOLD << "Error: " << av[1]
+			<< " failed to open" << std::endl << C_RESET;
 		return (2);
 	}
 	search = av[2];
 	replace = av[3];
-	if (search.length() < 1 || replace.length() < 1)
-		std::cout << C_YELLOW << "Warning: Input shouldn't be an empty string" << std::endl;
+	if (search.length() <= 0 || replace.length() <= 0)
+		std::cout << C_YELLOW << "Warning: Input shouldn't be an empty string"
+			<< std::endl << C_RESET;
 	file = (std::string)av[1] + (std::string)".replace";
 	while (getline(ifs, tmp))
 	{
@@ -84,7 +88,8 @@ int	main(int ac, char **av)
 		if (!ifs.eof())
 			output += "\n";
 	}
-	output = sed(output, search, replace);
+	if (search.length() > 0)
+		output = sed(output, search, replace);
 	std::ofstream	ofs(file.c_str());
 	ofs << output;
 	return (0);
