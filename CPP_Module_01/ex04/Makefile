@@ -6,7 +6,7 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2021/11/29 13:28:03 by adelille         ###   ########.fr        #
+#    Updated: 2021/11/30 09:27:59 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ clean:
 
 fclean:		clean
 	@$(RM) $(NAME)
+	$(RM) *.replace
 
 re:			fclean all
 
