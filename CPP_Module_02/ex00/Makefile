@@ -6,11 +6,11 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2021/12/07 11:32:56 by adelille         ###   ########.fr        #
+#    Updated: 2021/12/07 12:20:40 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	tmp
+NAME =	Mon_premier_cannon.out
 CC = 	c++
 RM = 	rm -rf
 

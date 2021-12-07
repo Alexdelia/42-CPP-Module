@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:26:23 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/07 11:39:24 by adelille         ###   ########.fr       */
+/*   Updated: 2021/12/07 12:16:02 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,17 @@ class Fixed
 {
 	public:
 		Fixed(void);
-		Fixed(const int n);
+		Fixed(const Fixed &src);
 		~Fixed(void);
 
+		Fixed	&operator=(const Fixed &rhs);
+
 		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
+		void	setRawBits(const int raw);
 
 	private:
-		const int	_bits = 8;
-		int			_fix;
+		static const int	_bits;
+		int					_fix;
 };
 
 #endif
