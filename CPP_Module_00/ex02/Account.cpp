@@ -6,7 +6,7 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 10:55:45 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 15:48:09 by adelille         ###   ########.fr       */
+/*   Updated: 2021/12/08 10:21:41 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	if (_amount < withdrawal)
 	{
 		std::cout << C_RED << "index:" << _accountIndex << ";p_amount:"
-			<< _amount - withdrawal << ";withdrawal:" << C_BOLD << C_UNDERLINE
+			<< _amount << ";withdrawal:" << C_BOLD << C_UNDERLINE
 			<< "refused" << std::endl << C_RESET;
 		return (false);
 	}
@@ -98,7 +98,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	_nbWithdrawals++;
 	_totalNbWithdrawals++;
 	std::cout << C_RED << "index:" << _accountIndex << ";p_amount:"
-		<< _amount - withdrawal << ";withdrawal:" << withdrawal << ";amount:"
+		<< _amount << ";withdrawal:" << withdrawal << ";amount:"
 		<< _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl << C_RESET;
 	return (true);
 }
