@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/10 19:20:10 by adelille         ###   ########.fr       */
+/*   Updated: 2021/12/10 19:21:14 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int ClapTrap::getAttackDamage(void) const
 	return (this->_attackDamage);
 }
 
-void ClapTrap::setName(const std::string name)
+void ClapTrap::setName(const std::string &name)
 {
 	this->_name = name;
 }
