@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:49:21 by adelille          #+#    #+#             */
-/*   Updated: 2021/11/26 12:39:57 by adelille         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:17:49 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ book::book(void)
 		}
 		else if (command == "SEARCH")
 			search_contact();
+		else if (!command[0])
+			return ;
 		else if (command != "EXIT")
 			std::cout << C_BOLD << C_RED
 				<< "Error: Unknown command" << std::endl << C_RESET;
