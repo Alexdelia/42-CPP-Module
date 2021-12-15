@@ -6,19 +6,19 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:50:59 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/14 18:11:50 by adelille         ###   ########.fr       */
+/*   Updated: 2021/12/15 18:26:25 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
 	ClapTrap	alex("alex");
 	ScavTrap	scav("scav");
-	FlagTrap	flag("flag");
+	FragTrap	frag("frag");
 
 	std::cout << alex.getName() << std::endl;
 	alex.attack("bob");
@@ -37,13 +37,13 @@ int	main(void)
 	scav.takeDamage(42);
 	scav.guardGate();
 	
-	std::cout << flag.getName() << std::endl;
-	flag.attack("bob");
-	flag.takeDamage(4);
-	flag.beRepaired(6);
-	flag.setAttackDamage(21);
-	flag.attack("bob");
-	flag.takeDamage(42);
-	flag.highFivesGuys();
+	std::cout << frag.getName() << std::endl;
+	frag.attack("bob");
+	frag.takeDamage(4);
+	frag.beRepaired(6);
+	frag.setAttackDamage(21);
+	frag.attack("bob");
+	frag.takeDamage(42);
+	frag.highFivesGuys();
 	return (0);
 }
