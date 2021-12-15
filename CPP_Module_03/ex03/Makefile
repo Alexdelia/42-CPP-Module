@@ -6,7 +6,7 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2021/12/13 18:56:20 by adelille         ###   ########.fr        #
+#    Updated: 2021/12/15 18:51:54 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CXX = 	clang++
 RM = 	rm -rf
 
 CXXFLAGS	=	-Wall -Werror -Wextra
+CXXFLAGS	+=	-Wshadow -Wno-shadow
 CXXFLAGS	+=	-std=c++98
 #CXXFLAGS	+=	-O2
 CXXFLAGS	+=	-g3
