@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/16 18:15:37 by adelille         ###   ########.fr       */
+/*   Updated: 2021/12/16 18:27:59 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ Cat	&Cat::operator=(const Cat &rhs)
 	return (*this);
 }
 
-std::ostream	&operator<<(std::ostream &o, const Cat &i)
+std::ostream	&operator<<(std::ostream &o, const Cat &src)
 {
-	o	<< "Type:\t" << i.getType() << std::endl;
+	o	<< "Type:\t" << src.getType() << std::endl;
 	return (o);
 }
 

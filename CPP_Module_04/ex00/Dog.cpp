@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/16 18:27:51 by adelille         ###   ########.fr       */
+/*   Updated: 2021/12/16 18:28:06 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
-Animal::Animal(void) : _type("Animal")
+Dog::Dog(void) : Animal::Animal("Dog")
 {
 	std::cout << typeid(this).name() <<"\tDefault constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal &src)
+Dog::Dog(const Dog &src)
 {
 	*this = src;
 	std::cout << typeid(this).name() <<"\tCopy constructor called" << std::endl;
 }
 
-Animal::Animal(const std::string &type) : _type(type)
+Dog::~Dog(void)
 {
-	std::cout << typeid(this).name() <<"\tDefault constructor called with type: " << type << std::endl;
-}
-
-Animal::~Animal(void)
-{
-	//std::cout << "Animal\tDestructor called for: " << getType() << std::endl;
 	std::cout << typeid(this).name() <<"\tDestructor called for: " << getType() << std::endl;
 }
 
-Animal	&Animal::operator=(const Animal &rhs)
+Dog	&Dog::operator=(const Dog &rhs)
 {
 	std::cout << typeid(this).name() <<"\tAssignment operator called" << std::endl;
 
@@ -43,23 +37,13 @@ Animal	&Animal::operator=(const Animal &rhs)
 	return (*this);
 }
 
-std::ostream	&operator<<(std::ostream &o, const Animal &src)
+std::ostream	&operator<<(std::ostream &o, const Dog &src)
 {
 	o	<< "Type:\t" << src.getType() << std::endl;
 	return (o);
 }
 
-void	Animal::makeSound(void) const
+void	Dog::makeSound(void) const
 {
-	std::cout << getType() << "\t*noise*" << std::endl;
-}
-
-std::string	Animal::getType(void) const
-{
-	return (this->_type);
-}
-
-void	Animal::setType(const std::string &type)
-{
-	this->_type = type;
+	std::cout << getType() << "\t*Bark*" << std::endl;
 }
