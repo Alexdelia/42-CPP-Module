@@ -6,12 +6,12 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2021/12/16 20:56:37 by adelille         ###   ########.fr        #
+#    Updated: 2021/12/16 21:23:51 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =	a.out
-CXX = 	clang++
+CXX = 	c++
 RM = 	rm -rf
 
 CXXFLAGS	=	-Wall -Werror -Wextra
