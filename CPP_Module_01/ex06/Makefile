@@ -6,7 +6,7 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2021/12/01 11:17:04 by adelille         ###   ########.fr        #
+#    Updated: 2021/12/17 12:21:52 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ RM = 	rm -rf
 
 CFLAGS	=	-Wall -Werror -Wextra
 CFLAGS	+=	-std=c++98
-CFLAGS	+=	-Werror=implicit-fallthrough=0
+#CFLAGS	+=	-Werror=implicit-fallthrough=0
 #CFLAGS	+=	-O2
 #CFLAGS	+=	-g
 #CFLAGS	+=	-fsanitize=address
