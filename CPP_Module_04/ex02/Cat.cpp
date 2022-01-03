@@ -6,14 +6,15 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/16 21:11:03 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/03 14:53:16 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) : Animal::Animal("Cat"), _brain(new Brain)
+Cat::Cat(void) : /*Animal::Animal("Cat"), */_brain(new Brain)
 {
+	setType("Cat");//
 	std::cout << typeid(this).name() <<"\tDefault constructor called" << std::endl;
 }
 

@@ -6,14 +6,15 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/16 21:18:49 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/03 14:53:38 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal::Animal("Dog"), _brain(new Brain())
+Dog::Dog(void) : /*Animal::Animal("Dog"), */_brain(new Brain())
 {
+	setType("Dog");
 	std::cout << typeid(this).name() <<"\tDefault constructor called" << std::endl;
 }
 
