@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   ICharacter.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/03 16:22:15 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/03 16:21:57 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
 # include <iostream>
 # include <typeinfo>
 
-# include "ICharacter"
+# include "AMateria.hpp"
 
-class AMateria
+class ICharacter
 {
 	public:
-		AMateria(void);
-		AMateria(const std::string &type);
-		AMateria(const AMateria &src);
-		virtual ~AMateria(void);
+		virtual ~ICharacter() {}
+		virtual std::string const & getName() const = 0;
 		
-		AMateria & operator=(const AMateria &rhs);
-
-		virtual AMateria*	clone() const = 0;
-		virtual void		use(ICharacter& target);
-
-		std::string const	&getType() const; //Returns the materia type
-
-	protected:
-		//std::string	_type;
+		virtual void	equip(AMateria* m) = 0;
+		virtual void	unequip(int idx) = 0;
+		virtual void	use(int idx, ICharacter& target) = 0;
 };
 
-//std::ostream &operator<<(std::ostream &o, AMateria const &src);
+//std::ostream &operator<<(std::ostream &o, ICharacter const &src);
 
 #endif

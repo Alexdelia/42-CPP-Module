@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/03 16:22:15 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/03 16:26:03 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 # include <iostream>
 # include <typeinfo>
 
-# include "ICharacter"
+# include "AMateria"
 
-class AMateria
+class MateriaSource
 {
 	public:
-		AMateria(void);
-		AMateria(const std::string &type);
-		AMateria(const AMateria &src);
-		virtual ~AMateria(void);
+		virtual ~IMateriaSource() {}
 		
-		AMateria & operator=(const AMateria &rhs);
-
-		virtual AMateria*	clone() const = 0;
-		virtual void		use(ICharacter& target);
-
-		std::string const	&getType() const; //Returns the materia type
-
-	protected:
-		//std::string	_type;
+		virtual void		learnMateria(AMateria*) = 0;
+		virtual AMateria* 	createMateria(std::string const & type) = 0;
 };
 
-//std::ostream &operator<<(std::ostream &o, AMateria const &src);
+//std::ostream &operator<<(std::ostream &o, MateriaSource const &src);
 
 #endif
