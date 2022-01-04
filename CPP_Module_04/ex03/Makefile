@@ -6,7 +6,7 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2022/01/03 15:29:05 by adelille         ###   ########.fr        #
+#    Updated: 2022/01/04 14:44:58 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ RM = 	rm -rf
 CXXFLAGS	=	-Wall -Werror -Wextra
 #CXXFLAGS	+=	-Wshadow -Wno-shadow
 CXXFLAGS	+=	-std=c++98
+CXXFLAGS	+=	-pedantic
 #CXXFLAGS	+=	-O2
 CXXFLAGS	+=	-g3
 #CXXFLAGS	+=	-fsanitize=address
