@@ -6,9 +6,14 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 15:30:57 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/03 15:31:36 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/04 14:14:52 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "MateriaSource.hpp"
+#include "Character.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {

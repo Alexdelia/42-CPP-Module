@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/03 16:22:15 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/04 14:11:31 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <typeinfo>
 
-# include "ICharacter"
+# include "ICharacter.hpp"
 
 class AMateria
 {
@@ -28,13 +28,13 @@ class AMateria
 		
 		AMateria & operator=(const AMateria &rhs);
 
-		virtual AMateria*	clone() const = 0;
-		virtual void		use(ICharacter& target);
+		virtual AMateria*	clone(void) const = 0;
+		virtual void		use(ICharacter& target) = 0;
 
-		std::string const	&getType() const; //Returns the materia type
+		const std::string	&getType(void) const;
 
 	protected:
-		//std::string	_type;
+		std::string	_type;
 };
 
 //std::ostream &operator<<(std::ostream &o, AMateria const &src);
