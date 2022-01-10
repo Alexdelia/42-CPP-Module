@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/05 08:35:22 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/10 17:04:01 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Form::~Form(void)
 
 void	Form::beSigned(const Bureaucrat &b)
 {
-	if (b.getGrade() <= _grade_sign)
+	if ((int)b.getGrade() <= _grade_sign)
 		_sign = true;
 	else
 		throw Form::GradeTooLowException();
