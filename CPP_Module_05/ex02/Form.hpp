@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/12 13:42:50 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/12 22:46:08 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,12 @@ class Form
 			public:
 				virtual const char *what(void) const throw();
 		};
-		class GradeTooLowToSign : public std::exception
+		class GradeTooLowToExecute : public std::exception
+		{
+			public:
+				virtual const char *what(void) const throw();
+		};
+		class NotSigned : public std::exception
 		{
 			public:
 				virtual const char *what(void) const throw();

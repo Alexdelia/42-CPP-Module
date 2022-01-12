@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/12 13:37:44 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/12 22:27:14 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ class ShrubberyCreationForm : public Form
 		
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &rhs);
 
-		Form const		&getForm(void) const;
+		const Form		&getForm(void) const;
 		std::string		getTarget(void) const;
 		virtual void	execute(const Bureaucrat &executor) const;
 

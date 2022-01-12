@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/12 13:50:58 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/12 22:45:53 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	Form::execute(const Bureaucrat &executor) const
 	if (_grade_exec < (int)executor.getGrade())
 		throw Form::GradeTooLowException();
 	else if (getSign() == false)
-		throw Form::GradeTooLowToSign();
+		throw Form::NotSigned();
 	return ;
 }
 
@@ -66,9 +66,14 @@ const char	*Form::GradeTooHighException::what(void) const throw()
 	return ("Grade too high, maximum grade is 1");
 }
 
-const char	*Form::GradeTooLowToSign::what(void) const throw()
+const char	*Form::GradeTooLowToExecute::what(void) const throw()
 {
-	return ("Grade too low to sign");
+	return ("Grade too low to execute");
+}
+
+const char	*Form::NotSigned::what(void) const throw()
+{
+	return ("The form isn't signed");
 }
 
 Form	&Form::operator=(const Form &rhs)
