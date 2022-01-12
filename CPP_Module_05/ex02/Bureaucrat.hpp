@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/05 08:37:07 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/12 13:48:22 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Bureaucrat
 		void	downGrade(void);
 
 		void	signForm(Form &f);
+		void	executeForm(const Form &f);
 
 		std::string		getName(void) const;
 		unsigned int	getGrade(void) const;

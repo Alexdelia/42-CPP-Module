@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/11 18:08:50 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/12 13:37:44 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,41 @@
 //# include <typeinfo>
 # include <exception>
 
-#include "Form.hpp"
+# include "Form.hpp"
+
+# define TREE1 \
+"     .{{}}}}}}." << std::endl << \
+"    {{{{{{(`)}}}." << std::endl << \
+"   {{{(`)}}}}}}}}}" << std::endl << \
+"  }}}}}}}}}{{(`){{{" << std::endl << \
+"  }}}}{{{{(`)}}{{{{" << std::endl << \
+" {{{(`)}}}}}}}{}}}}}" << std::endl << \
+"{{{{{{{{(`)}}}}}}}}}}" << std::endl << \
+"{{{{{{{}{{{{(`)}}}}}}" << std::endl << \
+" {{{{{(`)   {{{{(`)}'" << std::endl << \
+"  `\"\"'\" |   | \"'\"'`" << std::endl << \
+"  (`)  /     \\" << std::endl << \
+" ~~~~~~~~~~~~~~~~~~~" << std::endl
+
+# define TREE2 \
+"              * *" << std::endl << \
+"           *    *  *" << std::endl << \
+"      *  *    *     *  *" << std::endl << \
+"     *     *    *  *    *" << std::endl << \
+" * *   *    *    *    *   *" << std::endl << \
+" *     *  *    * * .#  *   *" << std::endl << \
+" *   *     * #.  .# *   *" << std::endl << \
+"  *     \"#.  #: #\" * *    *" << std::endl << \
+" *   * * \"#. ##\"       *" << std::endl << \
+"   *       \"###" << std::endl << \
+"             \"##" << std::endl << \
+"              ##." << std::endl << \
+"              .##:" << std::endl << \
+"              :###" << std::endl << \
+"             ;###" << std::endl << \
+"            ,####." << std::endl << \
+"           .######." << std::endl << \
+"  ~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl
 
 class ShrubberyCreationForm : public Form
 {
@@ -28,7 +62,7 @@ class ShrubberyCreationForm : public Form
 		
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &rhs);
 
-		Form const		getForm(void) const;
+		Form const		&getForm(void) const;
 		std::string		getTarget(void) const;
 		virtual void	execute(const Bureaucrat &executor) const;
 

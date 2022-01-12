@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/11 18:10:31 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/12 13:53:25 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,37 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationF
 {
 	//std::cout << typeid(this).name() <<"\tAssignment operator called" << std::endl;
 
-	_sign = rhs.getSign();
+	_target = rhs.getTarget();
 	
 	return (*this);
 }
 
 std::ostream	&operator<<(std::ostream &o, const ShrubberyCreationForm &src)
 {
-	o << src.getName() << (src.getSign() ? "\033[32m is" : "\033[31m isn't")
-		<< "\033[0m signed.\t(sign grade: " << src.getGradeSign()
-		<< "\texecution grade: " << src.getGradeExec() << ")" << std::endl;
+	o << "ShrubberyCreationForm, " << src.getName() << ", target: "
+		<< src.getTarget() << ", Form: " << src.getForm() << std::endl;
 	return (o);
 }
 
-const Form	ShrubberyCreationForm::getForm(void) const
+void	ShrubberyCreationForm::execute(const Bureaucrat &executor) const
+{
+	std::string		file;
+	std::ofstream	ofs;
+
+	Form::execute(executor);
+	file = _target + "_shrubbery";
+	ofs.open(file.c_str(), std::ios::out | std::ios::trunc);
+	if (ofs.is_open())
+	{
+		ofs << TREE1 << std::endl;
+		ofs << TREE2;
+		ofs.close();
+	}
+	else
+		std::cerr << "Error : Failed to create the schrubbery." << std::endl;
+}
+
+const Form	&ShrubberyCreationForm::getForm(void) const
 {
 	return (*(Form*)this);
 }
