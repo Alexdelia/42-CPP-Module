@@ -6,11 +6,11 @@
 #    By: adelille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/15 15:56:29 by adelille          #+#    #+#              #
-#    Updated: 2022/01/12 13:54:10 by adelille         ###   ########.fr        #
+#    Updated: 2022/01/13 22:13:25 by adelille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	a.out
+NAME =	convert
 CXX = 	clang++
 RM = 	rm -rf
 

@@ -6,11 +6,37 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:14:41 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/13 19:20:40 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/13 22:56:48 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.hpp"
+
+static bool	parse(const std::string &str)
+{
+	int		i;
+	bool	p;
+
+	if (is_special(str) || is_printable_char(str))
+		return (true);
+	i = 0;
+	while (str[i] && (str[i] == '+' || str[i] == '-'))
+		i++;
+	p = false;
+	while (str[i])
+	{
+		if (!(isdigit(str[i]) || str[i] == 'f' || str[i] == '.'))
+			return (false);
+		if (str[i] == '.' && p == false)
+			p = true;
+		else
+			return (false);
+		if (str[i] == 'f' && str[i + 1])
+			return (false);
+		i++;
+	}
+	return (true);
+}
 
 int	main(int ac, char **av)
 {
