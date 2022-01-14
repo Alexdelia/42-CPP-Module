@@ -6,9 +6,13 @@
 /*   By: adelille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 21:21:02 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/14 21:21:42 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/14 21:58:48 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "whatever.hpp"
+
+#include <iostream>
 
 int	main(void)
 {
