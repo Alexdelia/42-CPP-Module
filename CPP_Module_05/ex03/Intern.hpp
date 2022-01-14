@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/14 18:50:05 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/14 18:51:53 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class Intern
 		
 		Intern	&operator=(const Intern &rhs);
 
-		Form	*makeForm(const std::string form, const std::string target) const;
+		Form	*makeForm(const std::string &form, const std::string &target) const;
 };
 
 // std::ostream	&operator<<(std::ostream &o, Intern const &src);

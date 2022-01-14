@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/14 18:48:53 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/14 18:52:01 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static Form	*makePPF(const std::string &target)
 	return (new PresidentialPardonForm(target));
 }
 
-Form	*Intern::makeForm(const std::string form, const std::string target) const
+Form	*Intern::makeForm(const std::string &form, const std::string &target) const
 {
 	t_type	t[] =
 	{
