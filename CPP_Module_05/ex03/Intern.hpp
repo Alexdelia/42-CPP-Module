@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/13 12:44:33 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/14 18:50:05 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 typedef struct s_type
 {
 	std::string	name;
-	Form		*(*f)(std::string target);
+	Form		*(*f)(const std::string &target);
 }				t_type;
 
 class Intern

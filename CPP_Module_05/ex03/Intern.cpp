@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:28:37 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/13 13:02:44 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/14 18:48:53 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,17 @@ Intern	&Intern::operator=(const Intern &rhs)
 	return (*this);
 }
 
-static Form	*makeSCF(const std::string target)
+static Form	*makeSCF(const std::string &target)
 {
 	return (new ShrubberyCreationForm(target));
 }
 
-static Form	*makeRRF(const std::string target)
+static Form	*makeRRF(const std::string &target)
 {
 	return (new RobotomyRequestForm(target));
 }
 
-static Form	*makePPF(const std::string target)
+static Form	*makePPF(const std::string &target)
 {
 	return (new PresidentialPardonForm(target));
 }
