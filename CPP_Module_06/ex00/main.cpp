@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:14:41 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/13 22:56:48 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/14 12:22:45 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,23 @@ static bool	parse(const std::string &str)
 	p = false;
 	while (str[i])
 	{
-		if (!(isdigit(str[i]) || str[i] == 'f' || str[i] == '.'))
-			return (false);
-		if (str[i] == '.' && p == false)
-			p = true;
+		if (isdigit(str[i]))
+			;
+		else if (str[i] == '.')
+		{
+			if (p == false)
+				p = true;
+			else
+				return (false);
+		}
+		else if (str[i] == 'f')
+		{
+			if (!str[i + 1])
+				return (true);
+			else
+				return (false);
+		}
 		else
-			return (false);
-		if (str[i] == 'f' && str[i + 1])
 			return (false);
 		i++;
 	}
@@ -42,14 +52,14 @@ int	main(int ac, char **av)
 {
 	if (ac != 2)
 	{
-		std::cerr << "Error: should have 1 arguments" << std::endl
+		std::cerr << ERROR << "should have 1 arguments" << std::endl
 			<< "./convert [ARG]" << std::endl
 			<< "(ARG can be char, int, float or double)" << std::endl;
 		return (1);
 	}
 	if (!parse(av[1]))
 	{
-		std::cerr << "Error: " << av[1] << " can't be converted" << std::endl;
+		std::cerr << ERROR << av[1] << " can't be converted" << std::endl;
 		return (2);
 	}
 	convert(av[1]);

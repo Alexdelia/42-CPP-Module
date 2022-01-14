@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 22:39:47 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/13 23:13:10 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/14 12:21:28 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 static void	convert_char(const double &n)
 {
 	if (n > 32 && n < 127)
-		std::cout << "char :\t'" << static_cast<char>(n) << "'" << std::endl;
+		std::cout << "char   :\t'" << static_cast<char>(n) << "'" << std::endl;
+	else if (n >= 0 && n <= 127)
+		std::cout << "char   :\t" << NONDIS << std::endl;
 	else
-		std::cout << "char :\tNon displayable" << std::endl;
+		std::cout << "char   :\t" << IMPOS << std::endl;
 }
 
 static void	convert_int(const double &n)
 {
 	if (n >= INT_MIN && n <= INT_MAX)
-		std::cout << "int :\t" << static_cast<int>(n) << std::endl;
+		std::cout << "int    :\t" << static_cast<int>(n) << std::endl;
 	else
-		std::cout << "int :\timpossible" << std::endl;
+		std::cout << "int    :\t" << IMPOS << std::endl;
 }
 
 static void	convert_float(const std::string &str, const double &n)
@@ -34,12 +36,12 @@ static void	convert_float(const std::string &str, const double &n)
 			|| n == 0 || is_special(str))
 	{
 		if (n < 99999)
-			std::cout << "float :\t" << std::fixed << std::setprecision(1) << static_cast<float>(n) << "f" << std::endl;
+			std::cout << "float  :\t" << std::fixed << std::setprecision(1) << static_cast<float>(n) << "f" << std::endl;
 		else
-			std::cout << "float :\t" << std::scientific << static_cast<float>(n) << "f" << std::endl;
+			std::cout << "float  :\t" << std::scientific << static_cast<float>(n) << "f" << std::endl;
 	}
 	else
-		std::cout << "float :\timpossible" << std::endl;
+		std::cout << "float  :\t" << IMPOS << std::endl;
 }
 
 static void	convert_double(const double &n)
@@ -60,8 +62,8 @@ void	convert(const std::string &str)
 		n = atof(str.c_str());
 	if (is_special(str))
 	{
-		std::cout << "char :\timpossible" << std::endl
-			<< "int :\timpossible" << std::endl;
+		std::cout << "char   :\t" << IMPOS << std::endl
+			<< "int    :\t" << IMPOS << std::endl;
 	}
 	else
 	{
