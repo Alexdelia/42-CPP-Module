@@ -6,18 +6,22 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 12:47:24 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/15 12:47:42 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/15 14:34:02 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Array.hpp"
+
 #include <iostream>
-#include <Array.hpp>
+#include <cstdlib>
 
 #define MAX_VAL 750
-int main(int, char**)
+
+int	main(int, char**)
 {
-	Array<int> numbers(MAX_VAL);
-	int* mirror = new int[MAX_VAL];
+	Array<int>	numbers(MAX_VAL);
+	int*		mirror = new int[MAX_VAL];
+
 	srand(time(NULL));
 	for (int i = 0; i < MAX_VAL; i++)
 	{
