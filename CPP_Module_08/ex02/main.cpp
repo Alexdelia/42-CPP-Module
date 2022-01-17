@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 18:17:30 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/17 13:32:33 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/17 14:58:18 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	main(void)
 			std::cout << *it << std::endl;
 			++it;
 		}
-		std::stack<int> s(mstack);
 	}
 
 	return (0);

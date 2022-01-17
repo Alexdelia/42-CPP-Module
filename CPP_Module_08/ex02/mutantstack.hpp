@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 13:26:38 by adelille          #+#    #+#             */
-/*   Updated: 2022/01/17 13:27:48 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/17 14:57:30 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class MutantStack : public std::stack<T>
 		MutantStack	&operator=(const MutantStack &rhs)
 		{
 			this->std::stack<T>::operator=(rhs);
+			return (*this);
 		}
 
 		iterator	begin(void)
