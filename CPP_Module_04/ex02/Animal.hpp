@@ -6,7 +6,7 @@
 /*   By: adelille <adelille@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 12:14:18 by adelille          #+#    #+#             */
-/*   Updated: 2021/12/19 18:59:39 by adelille         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:37:12 by adelille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal
 		
 		Animal & operator=(const Animal &rhs);
 
-		virtual void	makeSound(void) const;
+		virtual void	makeSound(void) const = 0;
 		
 		std::string	getType(void) const;
 		void		setType(const std::string &type);
