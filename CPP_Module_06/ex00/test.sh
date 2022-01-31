@@ -13,6 +13,7 @@ echo ;
 (set -x
 ./convert shit
 ./convert -1
+./convert c
 ./convert +2147483647
 ./convert +92147483647
 ./convert -2147483648
